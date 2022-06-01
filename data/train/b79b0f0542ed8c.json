@@ -1,0 +1,1 @@
+{"cell_type":{"2cbe35ed":"code","8e4e0d30":"markdown","94f0eb12":"markdown"},"source":{"2cbe35ed":"from kaggle_datasets import KaggleDatasets\npath_gcs = KaggleDatasets().get_gcs_path('cassava-leaf-disease-classification')\nprint(path_gcs) \n","8e4e0d30":"Done","94f0eb12":"# It changes sometimes !"}}

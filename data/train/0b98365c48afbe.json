@@ -1,0 +1,1 @@
+{"cell_type":{"ada53373":"code","00655188":"markdown"},"source":{"ada53373":"S='Hi. Welcome to Filoger AI Bootcamp.'\nsplited=S.split()\nprint(splited)","00655188":"# 1. Split Words Of String"}}

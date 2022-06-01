@@ -1,0 +1,1 @@
+{"cell_type":{"bc1e707c":"code","0bab455a":"code","f55c0afc":"markdown"},"source":{"bc1e707c":"import numpy as np # linear algebra\nimport pandas as pd # data processing, CSV file I\/O (e.g. pd.read_csv)\nimport cv2\nimport matplotlib.pyplot as plt ","0bab455a":"img = cv2.imread('..\/input\/cells-image\/cells.jpg')\nplt.imshow(img)","f55c0afc":"My pictur looks like this:"}}

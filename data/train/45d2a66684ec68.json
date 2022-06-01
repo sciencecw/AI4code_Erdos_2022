@@ -1,0 +1,1 @@
+{"cell_type":{"79c26ba7":"code","582cc69a":"markdown"},"source":{"79c26ba7":"import seaborn as sns\niris = sns.load_dataset(\"iris\")\n\nsns.jointplot(x=\"petal_length\", y=\"petal_width\", data=iris, kind=\"kde\");","582cc69a":"# 2-D Density Plot\n\n- Just like scatter plot (but little visually appealing)"}}

@@ -1,0 +1,1 @@
+{"cell_type":{"65c4890f":"code","936fcc51":"code","5178973f":"code","001b5e96":"markdown"},"source":{"65c4890f":"import pandas as pd \ndf = pd.read_csv(\"..\/input\/covid19-in-singapore-latest-detailed-data\/covid19_sg.csv\")\ndf.head()","936fcc51":"df.info()","5178973f":"df.describe().T","001b5e96":"## Covid Data in Singapore - Stats"}}

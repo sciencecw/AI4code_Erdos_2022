@@ -1,0 +1,1 @@
+{"cell_type":{"165be2f5":"code","38c9b928":"code","d26e3410":"markdown"},"source":{"165be2f5":"import numpy as np\nimport pandas as pd\nimport os\nprint(os.listdir(\"..\/input\/learn-together\"))","38c9b928":"df = pd.read_csv(\"..\/input\/learn-together\/sample_submission.csv\")\ndf.to_csv(\"submission.csv\", index=False)","d26e3410":"# Sample Submission"}}

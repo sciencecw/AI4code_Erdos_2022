@@ -1,0 +1,1 @@
+{"cell_type":{"4e37fb22":"code","f77e7f3e":"code","b1e34481":"code","0d5fe588":"markdown"},"source":{"4e37fb22":"import pandas as pd","f77e7f3e":"example = pd.read_csv(\"..\/input\/building-management-system-point-label-examples\/buildings\/ebu3b_ucsd.csv\")","b1e34481":"example","0d5fe588":"# Example of loading BMS Site point list"}}

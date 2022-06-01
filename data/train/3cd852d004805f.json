@@ -1,0 +1,1 @@
+{"cell_type":{"1230820e":"code","d275b78c":"code","3e43a364":"code","ec21b478":"markdown","0d919969":"markdown"},"source":{"1230820e":"import pandas as pd","d275b78c":"df = pd.read_csv('\/kaggle\/input\/data-driven-business-analytics\/train.csv', index_col=0)","3e43a364":"df.head()","ec21b478":"Anzeigen der oberen 5 Dateneintr\u00e4ge:","0d919969":"Das Einlesen der Daten:"}}

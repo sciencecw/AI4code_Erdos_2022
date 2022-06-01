@@ -1,0 +1,1 @@
+{"cell_type":{"28c2bda9":"code","34964a56":"markdown"},"source":{"28c2bda9":"import random\nimport janestreet\nenv = janestreet.make_env()\niter_test = env.iter_test()\n\nfor (test_df, sample_prediction_df) in iter_test:\n    sample_prediction_df.action = random.randint(0,1)\n    env.predict(sample_prediction_df)","34964a56":"# \u00bfWhat if it were all just random?..."}}

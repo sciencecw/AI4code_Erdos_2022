@@ -1,0 +1,1 @@
+{"cell_type":{"dc8a9d8c":"code","1718b6b4":"markdown"},"source":{"dc8a9d8c":"import tensorflow_hub","1718b6b4":"### Re: [https:\/\/www.kaggle.com\/product-feedback\/64085](https:\/\/www.kaggle.com\/product-feedback\/64085)\n\nThe following import statement fails whenever GPU is enabled despite the custom package being added to packages"}}
