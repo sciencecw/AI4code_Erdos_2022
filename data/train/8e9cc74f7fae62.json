@@ -1,0 +1,1 @@
+{"cell_type":{"01bdca12":"code","7b47f678":"code","30de6fcf":"markdown"},"source":{"01bdca12":"import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nimport warnings\nwarnings.filterwarnings(\"ignore\")","7b47f678":"df = pd.read_csv(\"..\/input\/heart-attack-analysis-prediction-dataset\/heart.csv\")","30de6fcf":"# 1.import packages"}}

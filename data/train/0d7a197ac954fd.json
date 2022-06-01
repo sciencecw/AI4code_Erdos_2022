@@ -1,0 +1,1 @@
+{"cell_type":{"bd991ec2":"code","d5d4f6ca":"markdown"},"source":{"bd991ec2":"from IPython.display import Video\n\nVideo(\"\/kaggle\/input\/memevideos\/video.mp4\", embed=True)","d5d4f6ca":"Sit back, take a deep breath and make yourself comfortable ... \nWhat else could happen?\n"}}

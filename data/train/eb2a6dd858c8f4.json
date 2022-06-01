@@ -1,0 +1,1 @@
+{"cell_type":{"adf6903d":"code","0b645b5e":"code","d8c22be8":"code","75d8147d":"markdown"},"source":{"adf6903d":"import numpy as np\nimport pandas as pd","0b645b5e":"train = pd.read_csv(\"..\/input\/titanic\/train.csv\")","d8c22be8":"train[::10]","75d8147d":"# ::nth  -> 0, nth , nth*2 , nth*3 ~ nth * m \n# every nth item index "}}

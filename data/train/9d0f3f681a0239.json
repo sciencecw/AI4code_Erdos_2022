@@ -1,0 +1,1 @@
+{"cell_type":{"a43037fb":"code","1a29b328":"code","e82f140b":"markdown"},"source":{"a43037fb":"#import basic dependencies\nimport pandas as pd\nimport numpy as np\nimport seaborn as sn\nimport matplotlib.pyplot as plt\n%matplotlib inline","1a29b328":"#read the dataset","e82f140b":"1. Exploratory Data Analysis PART 1"}}

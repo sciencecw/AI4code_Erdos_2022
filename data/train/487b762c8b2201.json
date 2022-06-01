@@ -1,0 +1,1 @@
+{"cell_type":{"bccc2a13":"code","182426b5":"code","4b0e9388":"code","1d061889":"code","374669ea":"markdown","b0a1bd5e":"markdown","dcc86d7b":"markdown"},"source":{"bccc2a13":"'abc' + 5","182426b5":"'abc' + str(5)","4b0e9388":"int('53') + 7","1d061889":"'This year is {}'.format(2019)","374669ea":"Convert Data Type","b0a1bd5e":"# Function","dcc86d7b":"Format"}}

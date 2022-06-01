@@ -1,0 +1,1 @@
+{"cell_type":{"b9398180":"code","4c9dfaae":"code","5cf41f70":"markdown"},"source":{"b9398180":"import numpy as np\nimport matplotlib.pyplot as plt","4c9dfaae":"y = np.arange(-3.14, 3.14, 0.1)\nx = np.sin(y)\nplt.plot(y,x)\nplt.title('Sine Wave')\nplt.xlabel('time')\nplt.ylabel('sin function')\nplt.show()","5cf41f70":"> Plotting Sine Function in Matplotlib"}}

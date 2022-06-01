@@ -1,0 +1,1 @@
+{"cell_type":{"7ce06e37":"code","e4a4c7ac":"markdown"},"source":{"7ce06e37":"!pip install cryptocompare\nimport cryptocompare\nprice = cryptocompare.get_price('BTC', 'PKR')\nprint(price)","e4a4c7ac":"Bitcoin to Pakistani Rupee "}}

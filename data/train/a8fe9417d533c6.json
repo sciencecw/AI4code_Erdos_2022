@@ -1,0 +1,1 @@
+{"cell_type":{"66a5460b":"code","0ebb70d5":"code","494e7ae5":"markdown"},"source":{"66a5460b":"import os\nfrom scipy.io import wavfile\nimport IPython.display as ipd","0ebb70d5":"ipd.Audio(wavfile.read(\"..\/input\/train_curated\/7f409e1a.wav\")[1], rate=44100)","494e7ae5":"## Found in the `train_curated` set\n\n## !Warning Not Safe For Work!"}}

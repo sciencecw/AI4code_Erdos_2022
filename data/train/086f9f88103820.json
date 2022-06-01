@@ -1,0 +1,1 @@
+{"cell_type":{"ba1480e5":"code","cb5f5f67":"code","a2a0495a":"code","25c0489a":"markdown"},"source":{"ba1480e5":"a = 1","cb5f5f67":"print(a)\na = a + 1","a2a0495a":"print(a)\na = a + 1","25c0489a":"```print('hello world')```"}}

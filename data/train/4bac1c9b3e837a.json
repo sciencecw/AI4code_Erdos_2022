@@ -1,0 +1,1 @@
+{"cell_type":{"93213587":"code","55ed5481":"code","8ba33a5f":"markdown"},"source":{"93213587":"\n\nprint(\"Visa\")","55ed5481":"import pandas as pd\nworld_happiness_report-2019 = pd.read_csv(\"..\/input\/world-happiness-report-2019\/world-happiness-report-2019.csv\")","8ba33a5f":"My first kaggle kernel\n"}}
