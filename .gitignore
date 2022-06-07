@@ -1,1 +1,15 @@
 .DS_Store
+*/.DS_store
+data/train_P1_code
+data/train_P1_md
+data/train_P2_code
+data/train_P2_md
+data/train_P3_code
+data/train_P3_md
+data/valid_P1_code
+data/valid_P1_md
+data/valid_P2_code
+data/valid_P2_md
+data/valid_P3_code
+data/valid_P3_md
+
