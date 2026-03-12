@@ -27,16 +27,15 @@ these pairwise predictions.
   data, reaching ~66% pairwise accuracy on code cells
 - Kendall Tau metric implementation matching the competition specification
 
-**What is missing:**
+**End-to-end evaluation** (`ltr_evaluate.py`) closes the loop by:
 
-- The pipeline stops at pairwise classification accuracy. There is no code
-  that aggregates pairwise predictions back into a full cell ordering and
-  evaluates it with Kendall Tau on held-out notebooks. This is the critical
-  gap -- the project never produces an actual ranking prediction.
-- Models are trained on ~3% of the data (1-in-30 sampling)
-- No end-to-end evaluation loop exists
+- Aggregating pairwise predictions into full cell orderings via Copeland
+  ranking (sum of win probabilities)
+- Evaluating with the competition's Kendall Tau metric on 140 held-out
+  validation notebooks
+- Comparing against random and file-order baselines
 
-See [LTR_ROADMAP.md](LTR_ROADMAP.md) for a concrete path to closing this gap.
+See [LTR_ROADMAP.md](LTR_ROADMAP.md) for further improvement ideas.
 
 ## Notebooks
 
@@ -48,6 +47,7 @@ See [LTR_ROADMAP.md](LTR_ROADMAP.md) for a concrete path to closing this gap.
 | **N4** `N4_preprocess_pipeline.ipynb` | Main preprocessing pipeline (P1 through P4) -- does the heavy lifting |
 | **N5** `N5_Training.ipynb` | Train classifiers and evaluate pairwise accuracy |
 | **NX** `NX_kendall_tau.ipynb` | Demonstrate and test the Kendall Tau competition metric |
+| **E2E** `ltr_evaluate.py` | End-to-end: train, predict notebook orderings, evaluate Kendall Tau |
 
 ## Pipeline Architecture
 
@@ -72,13 +72,30 @@ Raw JSON notebooks (139K files, 2 GB)
 **Output:** Sparse matrices (`*_P4_*_X.npz`) and label arrays (`*_P4_*.npy`)
 for training and validation, with code and markdown handled separately.
 
-## Current Results (Pairwise Classification on Code Cells)
+## Results
+
+### Pairwise Classification Accuracy (Code Cells)
 
 | Model | Accuracy | Precision | MSE |
 |-------|----------|-----------|-----|
 | Gaussian Naive Bayes | 57.9% | 65.0% | 0.421 |
 | MLP (2x100, SGD) | 65.6% | 65.3% | 0.344 |
-| Random Forest | *(did not finish -- 1000+ min on full set)* | — | — |
+
+### End-to-End Kendall Tau (140 Validation Notebooks)
+
+| Method | Code | Markdown | Combined |
+|--------|------|----------|----------|
+| Random baseline | — | — | -0.006 |
+| File-order baseline | — | — | 0.408 |
+| SGD (logistic) | 0.212 | 0.140 | 0.183 |
+| MLP (100 hidden) | 0.319 | 0.164 | 0.258 |
+
+The MLP model achieves a combined Kendall Tau of **0.258**, well above random
+(~0) but below the file-order baseline (0.408). The code-cell ordering
+(0.319) is notably stronger than markdown (0.164), likely because AST
+ancestry features provide useful ordering signal. The file-order baseline
+is surprisingly strong because the competition JSON files partially preserve
+the original notebook structure.
 
 ## Data
 

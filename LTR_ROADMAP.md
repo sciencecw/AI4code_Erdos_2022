@@ -4,19 +4,12 @@ This document describes a minimal but non-trivial path to turn the existing
 pairwise classification pipeline into a system that actually produces cell
 orderings and measures them with Kendall Tau -- the competition metric.
 
-## The Gap
+## Current Status
 
-The project currently trains binary classifiers on pairs of cells (does cell A
-come before cell B?) and reports pairwise accuracy (~66%). But it never:
-
-1. Aggregates those pairwise predictions into a full ordering of cells within
-   a notebook
-2. Evaluates that ordering against ground truth using Kendall Tau
-3. Compares the result to baselines (random ordering, original-file-order)
-
-Without step 1, the project has no ranking prediction. Without steps 2-3, there
-is no way to know if the approach is working at all as a learning-to-rank
-system.
+Steps 1-3 below are now **complete** (see `ltr_evaluate.py`). The MLP model
+achieves a combined Kendall Tau of 0.258 on 140 validation notebooks, well
+above random (~0) but below the file-order baseline (0.408). Step 4 lists
+concrete improvements that should close this gap.
 
 ## Proposed Steps
 
@@ -152,13 +145,16 @@ capability the project set out to build.
 
 ## Estimated Effort
 
-| Step | New code | Dependencies |
-|------|----------|--------------|
-| Step 1: Aggregation | ~30 lines | Trained model from N5 |
-| Step 2: Evaluation loop | ~40 lines | Validation data from P3, Kendall Tau from NX |
-| Step 3: Baselines | ~15 lines | None |
-| Step 4: Improvements | Variable | Steps 1-3 working |
+| Step | Status | Notes |
+|------|--------|-------|
+| Step 1: Aggregation | **Done** | Copeland ranking in `ltr_evaluate.py` |
+| Step 2: Evaluation loop | **Done** | Kendall Tau on 140 validation notebooks |
+| Step 3: Baselines | **Done** | Random (~0), file-order (0.408) |
+| Step 4: Improvements | Open | Highest leverage: beat the file-order baseline |
 
-Steps 1-3 are the minimal path. They require no new data processing, no new
-dependencies, and no retraining -- just connecting the pieces that already
-exist.
+The key insight from results: the file-order baseline (0.408) is strong because
+competition JSONs partially preserve structure. The model's code-cell ordering
+(0.319) shows the features carry signal, but the naive interleaving of
+independently-ranked code and markdown cells (0.258 combined) loses
+cross-type ordering information. Step 4 improvements -- especially combining
+code+markdown features and using gradient-boosted trees -- should address this.
